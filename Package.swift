@@ -3,26 +3,31 @@
 
 import PackageDescription
 
+
 let package = Package(
-    name: "swift-shell-command",
-    products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "swift-shell-command",
-            targets: ["swift-shell-command"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "swift-shell-command",
-            dependencies: []),
-        .testTarget(
-            name: "swift-shell-commandTests",
-            dependencies: ["swift-shell-command"]),
-    ]
+	name: "swift-shell-command",
+	platforms: [
+		.macOS(.v10_15)
+	],
+	products: [
+		.library(
+			name: "swift-shell-command",
+			targets: [
+				"swift-shell-command"
+			]
+		),
+	],
+	dependencies: [
+		// Dependencies declare other packages that this package depends on.
+	],
+	targets: [
+		// Targets are the basic building blocks of a package. A target can define a module or a test suite.
+		// Targets can depend on other targets in this package, and on products in packages this package depends on.
+		.target(
+			name: "swift-shell-command",
+			dependencies: []),
+		.testTarget(
+			name: "swift-shell-commandTests",
+			dependencies: ["swift-shell-command"]),
+	]
 )
