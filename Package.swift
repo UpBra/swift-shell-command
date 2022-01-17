@@ -5,7 +5,7 @@ import PackageDescription
 
 
 let package = Package(
-	name: "swift-shell-command",
+	name: "SSC",
 	platforms: [
 		.macOS(.v10_15)
 	],
