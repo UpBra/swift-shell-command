@@ -11,7 +11,7 @@ let package = Package(
 	],
 	products: [
 		.library(
-			name: "swift-shell-command",
+			name: "SSC",
 			targets: [
 				"swift-shell-command"
 			]
